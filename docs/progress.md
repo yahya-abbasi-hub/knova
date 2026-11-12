@@ -284,19 +284,12 @@ TIER 1 FINALIZATION - Password Reset:
      step 2 for dev convenience
 111. TESTED END TO END: requested reset, got dev token, reset password,
      logged in with new password, confirmed old token can't be reused
-## Next step (not yet started)
-TIER 1 (finalize product) remaining:
-- Automated test suite (pytest) - tests/unit, tests/integration
-- Docker + docker-compose (package the whole stack)
-- Minor cleanup (README, .env.example check, remove dead code)
+## PROJECT UPLOADED TO GITHUB
 
-TIER 2 (additional modules, deferred until Tier 1 done):
-analytics dashboard, rate limiting, audit logging, research mode,
-observability
-## Known gotchas / fixes applied
-- VS Code sometimes creates .ipynb instead of .py — always check file extension
-- Passwords with special characters (@, $, etc.) must be URL-encoded in
-  DATABASE_URL, or just avoid special chars in the postgres password
-- bcrypt must be pinned to 4.0.1 due to a passlib compatibility bug
-- Always run uvicorn from the KNOVA root: uvicorn backend.main:app --reload
-- psql needs PostgreSQL's bin folder added to Windows PATH manually
+- Git initialized, .gitignore verified (no secrets committed — .env,
+  .env.docker, .env.test all correctly excluded)
+- Pushed to https://github.com/yahya-abbasi-hub/knova
+- Docker/docker-compose included in the repo but noted as unstable on this
+  machine (repeated resource exhaustion/crashes during build — revisit
+  with more system resources or a leaner build approach in a future session)
+- Core product is complete, tested, and now safely version-controlled
