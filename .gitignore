@@ -1,0 +1,22 @@
+# Environment files (contain secrets)
+.env
+.env.docker
+.env.test
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Uploaded files (keep the folder structure, not the actual uploads)
+data/raw/*
+!data/raw/.gitkeep
+
+# Test artifacts
+.pytest_cache/
+data/evaluation/last_run_results.json
+
+# OS/editor files
+.DS_Store

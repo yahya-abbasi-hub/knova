@@ -1,0 +1,27 @@
+[
+  {
+    "question": "What is KNOVA?",
+    "expected_answer_contains": ["AI Knowledge Intelligence Platform", "RAG"],
+    "should_be_grounded": true
+  },
+  {
+    "question": "What vector database does KNOVA use?",
+    "expected_answer_contains": ["Qdrant"],
+    "should_be_grounded": true
+  },
+  {
+    "question": "What embedding model is recommended?",
+    "expected_answer_contains": ["BGE"],
+    "should_be_grounded": true
+  },
+  {
+    "question": "What is the capital of France?",
+    "expected_answer_contains": [],
+    "should_be_grounded": false
+  },
+  {
+    "question": "What programming language should be used?",
+    "expected_answer_contains": ["Python"],
+    "should_be_grounded": true
+  }
+]
